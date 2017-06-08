@@ -1,5 +1,12 @@
 <div class="jumbotron">
   <h1>Welcome to TwentyFive Tweets!</h1>
   <p>Look up a person's last 25 tweets</p>
+  <% if !current_user %>
   <p><%= link_to "Login", login_path, :class => "btn btn-primary btn-lg" %> or <%= link_to "Sign Up", new_user_path, :class => "btn btn-primary btn-lg" %></p>
+  <% end %>
 </div>
+
+<% if current_user %>
+	<h2>SIGNED IN</h2>
+	<a href="/logout" class="btn btn-primary">Logout</a>
+<% end %>
