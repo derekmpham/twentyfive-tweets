@@ -1,0 +1,16 @@
+/*.red {
+  border: 2px solid red;
+}*/
+
+.btn-primary {
+	background-color: #87CEFA;
+	border-color: #87CEFA;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+	background-color: #00BFFF;
+	border-color: #00BFFF;
+}
