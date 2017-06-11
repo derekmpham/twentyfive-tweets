@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   def index
+    # @tweets = $client.search(params[:search], result_type: "recent").take(10)
+    @biebers = $client.search("from:justinbieber", result_type: "recent").take(25)
     render "index"
   end
 
