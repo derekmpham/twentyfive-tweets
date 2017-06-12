@@ -9,6 +9,11 @@ class ApplicationController < ActionController::Base
     render "index"
   end
 
+  def tweets
+  	@twitter_handle = params[:twitter_handle]
+  	@tweets = $client.search("from:#{@twitter_handle}", result_type: "recent").take(25)
+  end
+
   def authorize
     redirect_to '/login' unless current_user
   end

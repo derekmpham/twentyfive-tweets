@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root 'application#index'
 
+  resources :application, :collection=>{:index => :get, :tweets => :post}
+
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'

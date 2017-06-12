@@ -7,12 +7,15 @@
 </div>
 
 <% if current_user %>
+<%= form_tag '/tweets' do %>
+<%=text_field_tag 'twitter_handle', "Twitter Handle"%>
 
-
+<div><%= submit_tag 'Search' %></div>
+<% end %>
 
 <% @biebers.each do |tweet| %>
 
-<%= "#{tweet.user.screen_name}: #{tweet.text}" %>
+<b><%= "#{tweet.user.screen_name}:" %></b> <%= "#{tweet.text}" %>
 <br>
 <i><%= "#{tweet.created_at.strftime("%A %b %d, %G %r")} GMT" %></i>
 <br>
