@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 
   root 'application#index'
 
-  post "tweets" => "tweets#index"
   get "tweets" => "tweets#index"
+  # post "tweets/tweet_search" => "tweets#tweet_search"
+  # get "tweets/tweet_search" => "tweets#tweet_search"
+  match "tweets/tweet_search" => "tweets#tweet_search", via: [:get, :post]
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

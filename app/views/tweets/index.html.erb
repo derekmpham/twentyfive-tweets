@@ -1,18 +1,32 @@
 <div class="jumbotron">
-	<h1>Check out <%= "#{@tweets.first.user.name}" %>'s most recent tweets</h1>
-	<br>
-	<a href="/" class="btn btn-primary">Back to Home</a>
-	<a href="/logout" class="btn btn-primary">Logout</a>
+	<h1>Welcome to TwentyFive Tweets!</h1>
+	<p>Look up a person's last 25 tweets</p>
+	<% if !current_user %>
+	<p><%= link_to "Login", login_path, :class => "btn btn-primary btn-lg" %> or <%= link_to "Sign Up", new_user_path, :class => "btn btn-primary btn-lg" %></p>
+	<% end %>
+	<% if current_user %>
+	<div>
+	<%= form_tag '/tweets/tweet_search' do %>
+		<%=text_field_tag 'twitter_handle', nil, placeholder: 'twitter handle' %>
+
+		<%= submit_tag 'Search', :class => "btn btn-primary" %>
+	<% end %>
+	</div>
+	<% end %>
 </div>
+<div style="background-image:url('http://staceybrooks1.homestead.com/bluesplat.png');background-size:cover;">
 
-<div style="background-image:url('https://cdn0.iconfinder.com/data/icons/getsoci-2/1460/getsoci5.png');background-size:cover;">
-<% @tweets.each do |tweet| %>
+		<% @trump_tweets.each do |tweet| %>
 
-<b><%= "#{tweet.user.screen_name}:" %></b> <%= "#{tweet.text}" %>
-<br>
-<i><%= "#{tweet.created_at.strftime("%A %b %d, %G %r")} GMT" %></i>
-<br>
-<br>
-<br>
-<% end %>
+		<b><%= "#{tweet.user.screen_name}:" %></b> <%= "#{tweet.text}" %>
+		<br>
+		<i><%= "#{tweet.created_at.strftime("%A %b %d, %G %r")} GMT" %></i>
+		<br>
+		<br>
+		<br>
+		<% end %>
+
+		<% if current_user %>
+		<a href="/logout" class="btn btn-primary">Logout</a>
+		<% end %>
 </div>
