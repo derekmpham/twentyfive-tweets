@@ -1,24 +1,22 @@
-# README
+# TwentyFive Tweets
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Search a person's last 25 tweets.
 
-Things you may want to cover:
+![alt tag](initial page)
 
-* Ruby version
 
-* System dependencies
+## Login or Sign Up
 
-* Configuration
+![alt tag](login page)
+![alt tag](sign up page)
 
-* Database creation
 
-* Database initialization
+## Type in someone's Twitter handle
 
-* How to run the test suite
+![alt tag](logged in home page)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Read through that person's last 25 tweets and know when they tweeted
 
-* ...
+![alt tag](logged in home page)
+![alt tag](pt 2 logged in home page)
