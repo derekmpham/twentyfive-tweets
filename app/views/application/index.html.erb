@@ -5,24 +5,28 @@
 	<p><%= link_to "Login", login_path, :class => "btn btn-primary btn-lg" %> or <%= link_to "Sign Up", new_user_path, :class => "btn btn-primary btn-lg" %></p>
 	<% end %>
 	<% if current_user %>
-<div><%= form_tag '/tweets' do %>
-<%=text_field_tag 'twitter_handle', "twitter handle" %>
+	<div>
+	<%= form_tag '/tweets' do %>
+		<%=text_field_tag 'twitter_handle', "twitter handle" %>
 
-<%= submit_tag 'Search', :class => "btn btn-primary" %>
-<% end %></div>
-<% end %>
-</div>
+		<%= submit_tag 'Search', :class => "btn btn-primary" %>
+	<% end %>
+	</div>
+	<% end %>
+	</div>
+	<div style="background-image:url('http://staceybrooks1.homestead.com/bluesplat.png');background-size:cover;">
 
-<% if current_user %>
+		<% @trump_tweets.each do |tweet| %>
 
-<% @biebers.each do |tweet| %>
+		<b><%= "#{tweet.user.screen_name}:" %></b> <%= "#{tweet.text}" %>
+		<br>
+		<i><%= "#{tweet.created_at.strftime("%A %b %d, %G %r")} GMT" %></i>
+		<br>
+		<br>
+		<br>
+		<% end %>
 
-<b><%= "#{tweet.user.screen_name}:" %></b> <%= "#{tweet.text}" %>
-<br>
-<i><%= "#{tweet.created_at.strftime("%A %b %d, %G %r")} GMT" %></i>
-<br>
-<br>
-<br>
-<% end %>
-<a href="/logout" class="btn btn-primary">Logout</a>
-<% end %>
+		<% if current_user %>
+		<a href="/logout" class="btn btn-primary">Logout</a>
+		<% end %>
+	</div>

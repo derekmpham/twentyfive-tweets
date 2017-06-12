@@ -4,15 +4,9 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   def index
-    # @tweets = $client.search(params[:search], result_type: "recent").take(10)
-    @biebers = $client.search("from:justinbieber", result_type: "recent").take(25)
+    @trump_tweets = $client.search("from:realDonaldTrump", result_type: "recent").take(5)
     render "index"
   end
-
-  # def search
-  # 	@twitter_handle = params[:twitter_handle]
-  # 	@tweets = $client.search("from:#{@twitter_handle}", result_type: "recent").take(25)
-  # end
 
   def authorize
     redirect_to '/login' unless current_user
