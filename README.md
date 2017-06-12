@@ -7,8 +7,8 @@ Search a person's last 25 tweets.
 
 ## Login or Sign Up
 
-![alt tag](https://github.com/derekmpham/twentyfive-tweets/blob/master/login-page.png)
-![alt tag](https://github.com/derekmpham/twentyfive-tweets/blob/master/signup-page.png)
+![alt tag](https://github.com/derekmpham/twentyfive-tweets/blob/master/login-page.png =400x300)
+![alt tag](https://github.com/derekmpham/twentyfive-tweets/blob/master/signup-page.png =400x300)
 
 
 ## Type in someone's Twitter handle
