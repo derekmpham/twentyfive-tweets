@@ -1,9 +1,11 @@
 class TweetsController < ApplicationController
 
-  def handle
+  def retrieve
   end
 
-  def person
+  def index
+  	@twitter_handle = params[:twitter_handle]
+  	@tweets = $client.search("from:#{@twitter_handle}", result_type: "recent").take(25)
   end
 
 end

@@ -1,0 +1,9 @@
+<% @tweets.each do |tweet| %>
+
+<b><%= "#{tweet.user.screen_name}:" %></b> <%= "#{tweet.text}" %>
+<br>
+<i><%= "#{tweet.created_at.strftime("%A %b %d, %G %r")} GMT" %></i>
+<br>
+<br>
+<br>
+<% end %>
