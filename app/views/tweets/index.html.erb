@@ -1,3 +1,11 @@
+<div class="jumbotron">
+	<h1>Check out <%= "#{@tweets.first.user.name}" %>'s most recent tweets</h1>
+	<br>
+	<a href="/" class="btn btn-primary">Back to Home</a>
+	<a href="/logout" class="btn btn-primary">Logout</a>
+</div>
+
+<div style="background-image:url('https://cdn0.iconfinder.com/data/icons/getsoci-2/1460/getsoci5.png');background-size:cover;">
 <% @tweets.each do |tweet| %>
 
 <b><%= "#{tweet.user.screen_name}:" %></b> <%= "#{tweet.text}" %>
@@ -7,3 +15,4 @@
 <br>
 <br>
 <% end %>
+</div>
