@@ -46,4 +46,4 @@ Go back to your command line and run:
 	rake db:migrate
 	rails s
 
-Copy and paste http://localhost:3000 into your browser, and that's it-- now you can run TwentyFive Tweets locally!
+Copy and paste http://localhost:3000 into your browser, and that's it--you can now run TwentyFive Tweets locally!
