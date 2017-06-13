@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get "tweets" => "tweets#index"
   # post "tweets/tweet_search" => "tweets#tweet_search"
   # get "tweets/tweet_search" => "tweets#tweet_search"
-  match "tweets/tweet_search" => "tweets#tweet_search", via: [:get, :post]
+  match "tweets/#{@twitter_handle}" => "tweets#tweet_search", via: [:get, :post]
+  # match "tweets/tweet_search" => "tweets#tweet_search", via: [:get, :post]
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
