@@ -24,7 +24,9 @@ Search a person's last 25 tweets.
 
 ## Installation
 
-These instructions assume that you already have Ruby on Rails set up on your computer. To set up Ruby on Rails, click [here](https://launchschool.com/blog/how-to-install-ruby-on-rails-development-environment-for-mac-os-x) for Mac and [here](https://launchschool.com/blog/how-to-install-ruby-on-rails-development-environment-for-linux) for Linux. First, register to use the Twitter REST API [here](https://apps.twitter.com/). Then run the following in your command line:
+These instructions assume that you already have Ruby on Rails set up on your computer. To set up Ruby on Rails, click [here](https://launchschool.com/blog/how-to-install-ruby-on-rails-development-environment-for-mac-os-x) for Mac and [here](https://launchschool.com/blog/how-to-install-ruby-on-rails-development-environment-for-linux) for Linux. Also, if you have not already done so, you need to register to use the Twitter REST API [here](https://apps.twitter.com/).
+
+Start by running the following in your command line:
 
 	git clone https://github.com/derekmpham/twentyfive-tweets.git
 	cd twentyfive-tweets/
