@@ -6,7 +6,7 @@
 	<% end %>
 	<% if current_user %>
 	<div>
-	<%= form_tag "/tweets/#{@twitter_handle}" do %>
+	<%= form_tag "/tweets" do %>
 		<%=text_field_tag 'twitter_handle', nil, placeholder: 'Twitter handle' %>
 
 		<%= submit_tag 'Search', :class => "btn btn-primary" %>
