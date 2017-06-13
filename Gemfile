@@ -1,5 +1,3 @@
-gem 'dotenv-rails', :groups => [:development, :test]
-
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -37,8 +35,8 @@ gem 'twitter'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem 'dotenv-heroku'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'dotenv-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
