@@ -1,4 +1,4 @@
-# TwentyFive Tweets
+# [TwentyFive Tweets](https://desolate-shore-30039.herokuapp.com/tweets)
 
 Search a person's last 25 tweets.
 
@@ -47,3 +47,5 @@ Go back to your command line and run:
 	rails s
 
 Copy and paste http://localhost:3000 into your browser, and that's it--you can now run TwentyFive Tweets locally!
+
+# Click [here](https://desolate-shore-30039.herokuapp.com/tweets) to see it live
