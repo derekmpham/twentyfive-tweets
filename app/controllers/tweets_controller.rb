@@ -9,13 +9,14 @@ class TweetsController < ApplicationController
   	@twitter_handle = params[:twitter_handle]
   	@tweets = $client.search("from:#{@twitter_handle}", result_type: "recent").take(25)
   	p @twitter_handle
-  	
+
   	# if !@tweets.present?
   	# 	redirect_to '/tweets'
   	# end
 
   	if @tweets.present?
-  		redirect_to "/tweets/#{@twitter_handle}"
+  		# redirect_to "/tweets/#{@twitter_handle}"
+  		render "tweet_search"
   	else
   		redirect_to '/tweets'
   	end
