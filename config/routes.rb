@@ -4,9 +4,6 @@ Rails.application.routes.draw do
 
   root 'application#index'
 
-  # get "tweets" => "tweets#index"
-  # match "tweets" => "tweets#tweet_search", via: [:get, :post]
-
   get "tweets" => "tweets#index"
   match "/tweets/#{@twitter_handle}" => "tweets#tweets_search", :as => "tweets_search", via: [:get, :post]
 
