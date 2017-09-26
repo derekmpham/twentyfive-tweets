@@ -1,4 +1,4 @@
-# [TwentyFive Tweets](https://desolate-shore-30039.herokuapp.com/tweets)
+# TwentyFive Tweets
 
 Search a person's last 25 tweets.
 
